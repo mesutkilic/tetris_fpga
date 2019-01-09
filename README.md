@@ -2,6 +2,5 @@
 # TETRIS Game on ARTY Z7 FPGA Board
 
 
+<img src="https://www.mesutkilic.com.tr/wp-content/uploads/2019/01/20190110_021457.jpg" height="450">
 
-
-![tetris_v00](https://user-images.githubusercontent.com/7684011/50936492-f331b000-1480-11e9-887a-2b4040c6df6b.jpg 100x300)
