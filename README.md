@@ -1,5 +1,5 @@
 
-#TETRIS Game on ARTY Z7 FPGA Board
+# TETRIS Game on ARTY Z7 FPGA Board
 
 
 
