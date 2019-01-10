@@ -21,9 +21,9 @@ int main()
 	XGpio btn;
 	init_game(&btn);
 
-	//init_seq(10);
-	set_map(text_go,4);
-	delay(1000);
+	init_seq(10);
+	//set_map(text_go,4);
+	//delay(1000);
 
 	update_map();
 	set_full_map(0,0); //clear map
