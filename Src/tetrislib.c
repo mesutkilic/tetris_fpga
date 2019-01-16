@@ -213,9 +213,15 @@ void init_game(XGpio *InstancePtr){
 	// Create a pointer to the base of the starting address of the buffer
 	volatile uint32_t *objs = (volatile uint32_t*)(XPAR_OBJECTBUFFER_0_S00_AXI_BASEADDR);
 	objs[0] = 0x0000000; //dark
+	objs[1] = (0 << 16 | 720);
+	objs[2] = (0 << 16 | 720);
 
 	set_zero();
-	set_full_map(0,DEFAULT_COLOR);
+	set_full_map(0,DEFAULT_COLOR); //clear map
+
+	for(int i=0; i<8; ++i){
+		set_minicube(i,0,2); //clear minimap
+	}
 	print("TETRIS Starting\n\r");
 
 }
@@ -256,7 +262,7 @@ int get_coordy(int i){
 }
 void set_coord(int i, int j, int val){
 	shape.coord[i][j]=val;
-	set_color(i,j);
+	//set_color(i,j);
 }
 
 int get_last_coord(int i, int j){
@@ -498,6 +504,7 @@ void shift_map_down(int row){
 	for(int i=row; i<16; ++i){
 		for(int j=0; j<10; ++j){
 			tetris_map[i][j]=tetris_map[i+1][j];
+			tetris_color_map[i][j]=tetris_color_map[i+1][j];
 		}
 	}
 	set_row(16,0,0);
