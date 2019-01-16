@@ -1,0 +1,42 @@
+Create Project 
+
+Flow Navigator >> PROJECT MENAGER >> Settings
+
+Project Settings >> IP >> Reposity
+
+Add xilinx-ip-repo there
+
+Tools >> Run Tcl Scrpit 
+
+find tetris.tcl
+
+Sources >> "+" button >> Add or create constraints
+
+Add Files >> tetris_hdmi_xdc
+
+Sources >> Design Sources >> design_1 right-click >>Generate Output Products
+
+Synthesis Options >> Choose Global >> Generate --this may take a while
+
+Sources >> Design Sources >> design_1 right-click >> Create HDL Wrapper...
+
+Flow Navigator >> PROGRAM AND DEBUG >> Generate Bitstream --this took about 25 min on my pc
+
+File >> Export >> Export Hardware >> tick "Include bitstream"
+
+File >> Launch SDK
+
+File >> New >> Application Project
+OS Platform >> standalone
+Board Support  Packpage >> Create New
+
+Copy files to src folder
+
+SDK Terminal >> "+" button >> Port, baudrate:115200
+
+Xilinx >> Program FPGA
+
+Run
+Project Explorer >> right-click on the project >> Run as >> 1 Launch on Hardware (Sysytem Debugger)
+
+Enjoy the Game
